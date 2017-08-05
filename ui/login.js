@@ -23,6 +23,10 @@ function check(form) { /*function to check userid & password*/
                  else if(form.uname.value == "megha" && form.psw.value == "piggy") {
                     window.open('/index')/*opens the target page while Id & password matches*/
                 }
+                
+                else if(form.uname.value == "vidhya" && form.psw.value == "naayi") {
+                    window.open('/index')/*opens the target page while Id & password matches*/
+                }
 				
 				
                 else {
