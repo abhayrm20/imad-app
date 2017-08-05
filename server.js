@@ -91,6 +91,11 @@ app.get('/ui/apeksha', function (req, res) {
  
 });
 
+app.get('/ui/arpitha', function (req, res) {
+  res.send(`Username: arpitha <br>  Password: letmein`);
+ 
+});
+
 function createTemplate (data) {
     var title = data.title;
     var date = data.date;
