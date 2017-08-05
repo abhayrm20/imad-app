@@ -81,32 +81,32 @@ app.get('/:articleName', function (req, res) {
   res.send(createTemplate(articles[articleName]));
 });
 
-app.get('/ui/vishal', function (req, res) {
+app.get('/login/vishal', function (req, res) {
   res.send(`Username: vishal <br>  Password: meanie`);
  
 });
 
-app.get('/ui/apeksha', function (req, res) {
+app.get('/login/apeksha', function (req, res) {
   res.send(`Username: apeksha <br>  Password: srichaitanya`);
  
 });
 
-app.get('/ui/arpitha', function (req, res) {
+app.get('/login/arpitha', function (req, res) {
   res.send(`Username: arpitha <br>  Password: letmein`);
  
 });
 
-app.get('/ui/megha', function (req, res) {
+app.get('/login/megha', function (req, res) {
   res.send(`Username: megha <br>  Password: piggy`);
  
 });
 
-app.get('/ui/vidhya', function (req, res) {
+app.get('/login/vidhya', function (req, res) {
   res.send(`Username: vidhya <br>  Password: naayi`);
  
 });
 
-app.get('/ui/divya', function (req, res) {
+app.get('/login/divya', function (req, res) {
   res.send(`Username: divya <br>  Password: fillefolle`);
  
 });
