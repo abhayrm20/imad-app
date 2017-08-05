@@ -82,8 +82,7 @@ app.get('/:articleName', function (req, res) {
 });
 
 app.get('/vishal', function (req, res) {
-  res.send(`Username: vishal 
-            Password: meanie`);
+  res.send('Username: vishal Password: meanie');
  
 });
 
