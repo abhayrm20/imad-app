@@ -111,7 +111,7 @@ app.get('/ui/divya', function (req, res) {
  
 });
 
-app.get('/ui/sharan', function (req, res) {
+app.get('/login/sharan', function (req, res) {
   res.send(`Username: sharan <br>  Password: sharanshinduja`);
  
 });
