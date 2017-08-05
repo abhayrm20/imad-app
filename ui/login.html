@@ -1,6 +1,7 @@
 <html>
 <head><title>Login</title>
 <meta name="viewport" content="width-device-width, initial-scale=1" />
+<link href="ui/style.css" rel="stylesheet" />
 </head>
 
 <body align=center>
@@ -8,13 +9,14 @@
   <div class="imgcontainer">
     <img src="/ui/madi.png" class="img-medium"/>
   </div><br>
+  <div class="container">
 <h1> Welcome to my server</h1><hr/>
 <h3>Please login to continue</h3>
 <form name="login">
 <div class="container" style="background-color:#f1f1f1">
 <label><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required><br>
-    <label><b>&nbsp Password</b></label>&nbsp 
+    <label><b> Password</b></label> 
     <input type="password" placeholder="Enter Password" name="psw" required>
 
 	<br>
@@ -27,20 +29,15 @@
 
   
   </form>
+  </div>
         <script language="javascript">
             function check(form) { /*function to check userid & password*/
                 /*the following code checkes whether the entered userid and password are matching*/
                 if(form.uname.value == "admin" && form.psw.value == "openit") {
-                    window.open('/server')/*opens the target page while Id & password matches*/
+                    window.open('/index')/*opens the target page while Id & password matches*/
                 }
 				
-				else if(form.uname.value == "user" && form.psw.value == "login") {
-					window.open('/traffic')
-					}
-					
-					else if(form.uname.value == "xxx" && form.psw.value == "xxx") {
-					window.open('/hidden')
-					}
+			
 				
 				
                 else {
