@@ -1,6 +1,6 @@
 function check(form) { /*function to check userid & password*/
                 /*the following code checkes whether the entered userid and password are matching*/
-                if(form.uname.value == "admin" && form.psw.value == "openit") {
+                if(form.uname.value == "admin" && form.psw.value == "abhay163020") {
                     window.open('/index')/*opens the target page while Id & password matches*/
                 }
                 else if(form.uname.value == "user" && form.psw.value == "login") {
