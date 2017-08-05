@@ -106,6 +106,11 @@ app.get('/ui/vidhya', function (req, res) {
  
 });
 
+app.get('/ui/divya', function (req, res) {
+  res.send(`Username: divya <br>  Password: fillefolle`);
+ 
+});
+
 function createTemplate (data) {
     var title = data.title;
     var date = data.date;
