@@ -15,7 +15,7 @@
 <h1> Welcome to my server</h1><hr/>
 <h3>Please login to continue</h3>
 <form name="login">
-<div class="container" style="background-color:#f1f1f1">
+<div class="container" style="background-color:#f1f1f1" id="dialog">
 <label><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required><br>
     <label><b> Password</b></label> 
@@ -28,7 +28,9 @@
 	(NOTE: You will have to wait for 120 seconds to access the server.) <hr/> 
     
   </div>
-
+  <script>
+   $( "#dialog" ).dialog();
+</script>
   
   </form>
   </div>
