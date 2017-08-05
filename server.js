@@ -116,7 +116,7 @@ app.get('/login/sharan', function (req, res) {
  
 });
 
-app.get('/login', function (req, res) {
+app.get('/login/user', function (req, res) {
   res.send(`Username: user <br>  Password: login`);
  
 });
