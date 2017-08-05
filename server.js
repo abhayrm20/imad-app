@@ -5,6 +5,46 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articles = {
+  article1: {
+      title: ' Article One | Abhay Rudramuni',
+      heading: 'Article One',
+      date: 'Aug 4, 2017',
+      content: `
+            <p>
+                Here comes my content for my first article.Here comes my content for my first article. Here comes my content for my first article.
+                Here comes my content for my first article. Here comes my content for my first article. Here comes my content for my first articl.
+            </p>
+            <p>
+                Here comes my content for my first article.Here comes my content for my first article. Here comes my content for my first article.
+                Here comes my content for my first article. Here comes my content for my first article. Here comes my content for my first articl.
+            </p>
+            <p>
+                Here comes my content for my first article.Here comes my content for my first article. Here comes my content for my first article.
+                Here comes my content for my first article. Here comes my content for my first article. Here comes my content for my first article.
+            </p>`
+  },
+  
+  
+  article2: {
+      title: ' Article Two | Abhay Rudramuni',
+      heading: 'Article Two',
+      date: 'Aug 5, 2017',
+      content: '      <p> This is my second article </p>' 
+            
+              },
+              
+  article3: {
+      title: ' Article Three | Abhay Rudramuni',
+      heading: 'Article Three',
+      date: 'Aug 6, 2017',
+      content: '      <p> This is my third article </p>' 
+            
+              },
+              
+    
+};
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -17,8 +57,8 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('/article', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'articles.html'));
+app.get('/:articleName', function (req, res) {
+  res.send(createTemplate(articles[articleName]));
 });
 
 function createTemplate (data) {
@@ -28,15 +68,25 @@ function createTemplate (data) {
     var content = data.content;
     
     var htmlTemplate =`
-    
-    
-    
-    
-    
-    
-    
-    
-    `
+        <html>
+<head>
+    <title> ${title}}</title>
+    <link href="ui/style.css" rel = "stylesheet" />
+</head>
+<div class="container"> 
+    <div>
+        <h1>${heading}</h1>
+    </div>
+    <div>
+        <h3>${date}</h3>
+    </div>
+    <div>
+        ${content}
+    </div>
+</div>
+</html>`
+;
+return htmlTemplate;
 }
 
 // Do not change port, otherwise your app won't run on IMAD servers
