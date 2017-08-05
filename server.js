@@ -55,8 +55,13 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'login.html'));
  
 });
+
 app.get('/index', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+app.get('/ui/login.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'login.js'));
 });
 
 app.get('/guest', function (req, res) {
