@@ -86,6 +86,11 @@ app.get('/ui/vishal', function (req, res) {
  
 });
 
+app.get('/ui/apeksha', function (req, res) {
+  res.send(`Username: apeksha <br>  Password: srichaitanya`);
+ 
+});
+
 function createTemplate (data) {
     var title = data.title;
     var date = data.date;
