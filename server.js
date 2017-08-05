@@ -116,6 +116,11 @@ app.get('/login/sharan', function (req, res) {
  
 });
 
+app.get('/login', function (req, res) {
+  res.send(`Username: user <br>  Password: login`);
+ 
+});
+
 function createTemplate (data) {
     var title = data.title;
     var date = data.date;
