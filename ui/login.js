@@ -12,6 +12,9 @@ function check(form) { /*function to check userid & password*/
                 else if(form.uname.value == "vishal" && form.psw.value == "meanie") {
                     window.open('/index')/*opens the target page while Id & password matches*/
                 }
+                else if(form.uname.value == "arpitha" && form.psw.value == "letmein") {
+                    window.open('/index')/*opens the target page while Id & password matches*/
+                }
 				
 			
 				
