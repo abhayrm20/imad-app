@@ -1,0 +1,42 @@
+
+<html><head>
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width-device-width, initial-scale=1" />
+<title>Guest mode</title>
+<script>
+var wtime;
+wtime=122;function stop()
+{
+clearTimeout(id); 
+}
+function start() 
+{ 
+wtime--;
+if (wtime >= 0)
+{ 
+frm.time.value = wtime;
+id=setTimeout("start()",1000);
+}
+if (wtime == 0)
+{ 
+window.open( 
+"server",target="_parent");
+}
+}
+</script>
+</head>
+<body onLoad="start();" onUnload="stop();">
+<blockquote>
+<h2><font color="#0000FF">Guest mode</font></h2>
+<hr>
+<form name=frm>
+<font color=red><h4>
+All guests are welcome to my server! </h4></font>
+<font color=red><h4>You'll be connected to the server in
+<INPUT TYPE=text NAME=time size=2>
+s</h4></font>
+</form>
+</body></html>
+
+</BODY></HTML>
