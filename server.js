@@ -26,7 +26,7 @@ var articles = {
             <p>
                 In conclusion, our unwise and extensive activity causes harm to the natural environment. We lose priceless natural resources, fresh air, water, forests, animals, birds, fish, insects, etc. People should change their lifestyle rapidly in order to stop deforestation, global warming, pollution and other problems, which can destroy the life on the planet. We ought to go green in order to save the life of future generations
             </p>
-            <font align="right">- Abhay Rudramuni</font>`
+            <right>- Abhay Rudramuni</right>`
                 
   },
   
