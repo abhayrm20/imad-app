@@ -81,6 +81,12 @@ app.get('/:articleName', function (req, res) {
   res.send(createTemplate(articles[articleName]));
 });
 
+app.get('/vishal', function (req, res) {
+  res.send(`Username: vishal 
+            Password: meanie`);
+ 
+});
+
 function createTemplate (data) {
     var title = data.title;
     var date = data.date;
