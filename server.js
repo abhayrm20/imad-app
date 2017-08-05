@@ -54,7 +54,7 @@ app.get('/index', function (req, res) {
 });
 
 app.get('/guest', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'guest.html'));
+  res.sendFile(path.join(__dirname, 'ui', 'timer2.html'));
 });
 
 app.get('/ui/style.css', function (req, res) {
