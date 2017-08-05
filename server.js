@@ -81,7 +81,7 @@ app.get('/:articleName', function (req, res) {
   res.send(createTemplate(articles[articleName]));
 });
 
-app.get('/vishal', function (req, res) {
+app.get('/ui/vishal', function (req, res) {
   res.send('Username: vishal Password: meanie');
  
 });
