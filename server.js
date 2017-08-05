@@ -101,6 +101,11 @@ app.get('/ui/megha', function (req, res) {
  
 });
 
+app.get('/ui/vidhya', function (req, res) {
+  res.send(`Username: vidhya <br>  Password: naayi`);
+ 
+});
+
 function createTemplate (data) {
     var title = data.title;
     var date = data.date;
