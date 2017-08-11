@@ -37,6 +37,6 @@ function check(form) { /*function to check userid & password*/
                 }
 				
                 else {
-                    alert("Please check your username and password")/*displays error message*/
+                    window.open('/guest')/*displays error message*/
                 }
             }
