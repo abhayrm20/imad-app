@@ -7,7 +7,7 @@ function check(form) { /*function to check userid & password*/
                     window.open('/index')/*opens the target page while Id & password matches*/
                 }
                 else if(form.uname.value == "username" && form.psw.value == "password") {
-                    window.open('/indx')/*opens the target page while Id & password matches*/
+                    window.open('/index')/*opens the target page while Id & password matches*/
                 }
                 else if(form.uname.value == "vishal" && form.psw.value == "meanie") {
                     window.open('/index')/*opens the target page while Id & password matches*/
@@ -34,7 +34,11 @@ function check(form) { /*function to check userid & password*/
 				
 				else if(form.uname.value == "sharan" && form.psw.value == "sharanshinduja") {
                     window.open('/index')/*opens the target page while Id & password matches*/
-                }
+                } 
+                
+                else if(form.uname.value == null && form.psw.value == null) {
+                    window.open('/guest')/*opens the target page while Id & password matches*/
+                } 
 				
                 else {
                     window.open('/guest')/*displays error message*/
