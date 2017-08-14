@@ -58,6 +58,34 @@ var articles = {
     
 };
 
+function createTemplate (data) {
+    var title = data.title;
+    var date = data.date;
+    var heading = data.heading;
+    var content = data.content;
+    
+    var htmlTemplate =`
+        <html>
+<head>
+    <title> ${title}</title>
+    <link href="ui/style.css" rel = "stylesheet" />
+</head>
+<div class="container"> 
+    <div>
+        <h1>${heading}</h1>
+    </div>
+    <div>
+        <h3>${date}</h3>
+    </div>
+    <div>
+        ${content}
+    </div>
+</div>
+</html>`
+;
+return htmlTemplate;
+}
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'login.html'));
  
@@ -142,33 +170,7 @@ app.get('/login/user', function (req, res) {
  
 });
 
-function createTemplate (data) {
-    var title = data.title;
-    var date = data.date;
-    var heading = data.heading;
-    var content = data.content;
-    
-    var htmlTemplate =`
-        <html>
-<head>
-    <title> ${title}</title>
-    <link href="ui/style.css" rel = "stylesheet" />
-</head>
-<div class="container"> 
-    <div>
-        <h1>${heading}</h1>
-    </div>
-    <div>
-        <h3>${date}</h3>
-    </div>
-    <div>
-        ${content}
-    </div>
-</div>
-</html>`
-;
-return htmlTemplate;
-}
+
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
