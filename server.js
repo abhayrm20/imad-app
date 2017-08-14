@@ -126,7 +126,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/articles/:articleName', function (req, res) {
-  Pool.query("select * from articles where term='"+req.params.articleName + "';", function(err,result){
+  Pool.query("select * from articles where term=$1", [req.params.articleName] , function(err,result){
    if (err) {
        res.status(500).send(err.toString());
        }
