@@ -1,29 +1,6 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
-
-var app = express();
-app.use(morgan('combined'));
-
-app.get('/traffic', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'timer.html'));
-});
-
-app.get('/server', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'server.html'));
-});
-
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'login.html'));
-});
-
-app.get('/index', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-var express = require('express');
-var morgan = require('morgan');
-var path = require('path');
 var Pool = require ('pg').Pool;
 var crypto = require('crypto');
 var bodyParser = require('body-Parser');
