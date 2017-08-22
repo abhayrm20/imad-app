@@ -68,9 +68,7 @@ app.get('/index', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/', function (req, res) {
-  res.send(`Page loaded without errors`);
-});
+
 
 app.get('/ui/login.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'login.js'));
