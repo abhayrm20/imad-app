@@ -19,6 +19,7 @@ submit.onclick = function() {
     console.log(username);
     console.log(password);
     request.open('POST', 'http://abhayrm01.imad.hasura-app.io/login', true);
+    request.setRequestHeader('Content-Tyoe', "application/json");
     request.send(JSON.stringify({username: username, password: password}));
     
 };
