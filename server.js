@@ -203,45 +203,6 @@ app.get('/:articleName', function (req,res) {
     res.send(createTemplate(articles[articleName]));
 });
 
-app.get('/login/vishal', function (req, res) {
-  res.send(`Username: vishal <br>  Password: meanie`);
- 
-});
-
-app.get('/login/apeksha', function (req, res) {
-  res.send(`Username: apeksha <br>  Password: srichaitanya`);
- 
-});
-
-app.get('/login/arpitha', function (req, res) {
-  res.send(`Username: arpitha <br>  Password: letmein`);
- 
-});
-
-app.get('/login/megha', function (req, res) {
-  res.send(`Username: megha <br>  Password: piggy`);
- 
-});
-
-app.get('/login/vidhya', function (req, res) {
-  res.send(`Username: vidhya <br>  Password: naayi`);
- 
-});
-
-app.get('/login/divya', function (req, res) {
-  res.send(`Username: divya <br>  Password: fillefolle`);
- 
-});
-
-app.get('/login/sharan', function (req, res) {
-  res.send(`Username: sharan <br>  Password: sharanshinduja`);
- 
-});
-
-app.get('/login/user', function (req, res) {
-  res.send(`Username: username <br>  Password: password`);
- 
-});
 
 
 
