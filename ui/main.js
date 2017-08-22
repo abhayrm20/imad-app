@@ -4,21 +4,21 @@ submit.onclick = function() {
     request.onreadystatechange = function() {
         if (request.readyState === XMPHttpRequest.DONE) {
             if (request.status === 200) {
-                var names = request.responseText;
-                names = JSON.parse(names);
-                var list = '';
-                for (var i=0; i< names.length; i++) {
-                    list += '<li>' + names[i] + '</li>';
-                }
-                var ul = document.getElementById('namelist');
-                ul.innerHTML = list;
+                console.log('user logged in');
+                alert('Logged in successfully');
+            } else if (request.status ===403) {
+                alert('incorrect username/password');
+            } else if (request.status ===500) {
+               alert('something went wrong');  
             }
         }
     };
     
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
-    request.open('POST', 'http://abhayrm01.imad.hasura-app.io/submit-name?name=' + name, true);
+    console.log(username);
+    console.log(password);
+    request.open('POST', 'http://abhayrm01.imad.hasura-app.io/login', true);
     request.send(JSON.stringify({username: username, password: password}));
     
 };
