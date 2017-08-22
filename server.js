@@ -44,7 +44,7 @@ function createTemplate (data) {
 return htmlTemplate;
 }
 
-app.get('/login', function (req, res) {
+app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'login.html'));
  
 });
