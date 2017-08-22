@@ -15,7 +15,10 @@ var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
 
-
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'login.html'));
+ 
+});
 
 function createTemplate (data) {
     var title = data.title;
@@ -45,10 +48,7 @@ function createTemplate (data) {
 return htmlTemplate;
 }
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'login.html'));
- 
-});
+
 
 
 
