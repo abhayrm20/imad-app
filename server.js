@@ -136,7 +136,7 @@ app.get('/db-test-2', function (req, res) {
       }
    
    }); 
-
+});
 
 app.get('/index', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
