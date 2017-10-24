@@ -160,7 +160,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('/articles/articleName', function (req, res) { //replace with /articles/:articleName
+app.get('/article/:articleName', function (req, res) { //replace with /articles/:articleName
   Pool.query("select * from articles where term=$1", [req.params.articleName] , function(err,result){
    if (err) {
        res.status(500).send(err.toString());
@@ -177,7 +177,7 @@ app.get('/articles/articleName', function (req, res) { //replace with /articles/
   });
 });
 
-app.get('/article/:articleName', function (req,res) {
+app.get('/articles/:articleName', function (req,res) {
     var articleName = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
 });
