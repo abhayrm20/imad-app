@@ -128,7 +128,7 @@ app.get('/db-test-2', function (req, res) {
    Pool.query('select * from article3;', function(err,result) {
       if (err) {
             //res.status(500).send(err.toString());
-            res.send("Couldn't connect to the database. Check the query and database credentials.");
+            res.send("Couldn't establish connection to the database. Check the query and database credentials.");
       }
       else {
             //res.send(JSON.stringify(result.rows));
