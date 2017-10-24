@@ -112,9 +112,23 @@ app.post('/login', function (req,res) {
 var Pool = new Pool(config);
 
 app.get('/db-test', function (req, res) {
-   Pool.query('select * from article9;', function(err,result) {
+   Pool.query('select * from article;', function(err,result) {
       if (err) {
             res.status(500).send(err.toString());
+      }
+      else {
+            //res.send(JSON.stringify(result.rows));
+            res.send("You have successfully established connection with the database.");
+      }
+   
+   }); 
+});
+
+app.get('/db-test-2', function (req, res) {
+   Pool.query('select * from article3;', function(err,result) {
+      if (err) {
+            //res.status(500).send(err.toString());
+            res.senf("Couldn't connect to the database. Check the query and database credentials.");
       }
       else {
             //res.send(JSON.stringify(result.rows));
